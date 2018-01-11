@@ -1,0 +1,33 @@
+<import src="../../common/head.wxml" />
+<template is="head" data="{{title: '部门列表'}}"/>
+<view class="container flex-wrap flex-direction-row dept-class">
+	<!-- content -->
+	<scroll-view scroll-y style="height: 100%;" class="content flex-item">
+		<block wx:for="{{deptList}}">
+			<view class="dish flex-wrap flex-direction-row"  data-deptId="{{item.id}}">
+				<view class="flex-item" catchtap='deptDetail' data-deptId="{{item.id}}">
+					<text class="title">{{item.deptName}}</text>
+				</view>
+				<view class="add-btn" catchtap="selectDeptData" data-deptId="{{item.id}}">
+          <icon type="{{item.status ? 'success' : 'circle'}}" color="orange" size="30"></icon>
+        </view>
+			</view>
+		</block>
+	</scroll-view>
+</view>
+
+<!-- cart -->
+<view class="cart">
+  <view class="flex-wrap flex-direction-row" >
+    <view class="flex-item cls-btn"  > 
+        <button class="mini-btn" type="default" size="mini" bindtap='addRedirect'>添加</button>
+        <button class="mini-btn" type="default" size="mini" bindtap='updateRedirect'>修改</button>
+        <button class="mini-btn" type="default" size="mini" bindtap='del'>删除</button>
+    </view>
+	  <view class="add-btn" catchtap='selectAllDept'>
+      <icon type="{{allStatus ? 'success' : 'circle'}}" color="orange" size="30"></icon>
+    </view>
+  </view>
+</view>
+<!-- 加载对话框 -->
+<loading hidden="{{hidden}}">加载中…</loading>

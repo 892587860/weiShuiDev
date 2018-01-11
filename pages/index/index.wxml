@@ -1,0 +1,59 @@
+<!--index.wxml-->
+<view class="container flex-wrap flex-direction-col">
+  <view class="my-swiper" >
+    <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">  
+    <block wx:for="{{imgUrls}}" wx:key="*this">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" height="200"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  </view>
+
+    <!-- 分类导航 -->
+  <view class="nav-block wrap">
+    <block wx:for="{{navItems}}" wx:key="name"> 
+      <view class="wrap-item {{item.isSplot ? 'exp' : ''}}">
+      <view  class="navClass">
+        <navigator url="../components/{{item.url}}/{{item.url}}" hover-class="navigator-hover">
+          <image mode="scaleToFill"src="{{item.imageUrl}}"  style="width:50px;height:50px;border-radius:50%;"></image>
+          <text>{{item.name}}</text>
+        </navigator>
+      </view>
+      <!--  <navigator url="../components/{{item.url}}/{{item.url}}" hover-class="navigator-hover">{{item.name}}</navigator>-->
+      </view>
+    </block>
+  </view>
+  <view class="text">
+        <view class="line_flag"></view>
+        <text>新品上架</text>
+    </view>
+     <view class="venues_box">
+        <view class="venues_list">
+            <block wx:for="{{venuesItems}}"  wx:key="id">
+                <view class="venues_item">
+                    <image src="{{item.imgurl}}"/>
+                    <!--<view class="title">{{item.title}}</view>-->
+                </view>
+            </block>
+        </view>
+    </view>
+    <view class="text">
+        <view class="line_flag"></view>
+        <text>会员反馈</text>
+    </view>
+
+    <view class="choice_box">
+        <view class="choice_list">
+            <block wx:for="{{choiceItems}}"  wx:key="id">
+                <navigator url="../details/index?id={{item.id}}">
+                    <view class="choice_item">
+                        <image src="{{item.imgurl}}"/>
+                        <view class="title">{{item.title}}</view>
+                    </view>
+                </navigator>
+            </block>
+        </view>
+    </view>
+</view>
