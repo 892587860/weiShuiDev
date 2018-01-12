@@ -2,11 +2,16 @@
   "pages":[
     "pages/index/index",
     "pages/components/classify/classify",
-    "pages/components/person/person",
+    "pages/components/mine/mine",
     "pages/components/games/games",
     "pages/components/take/take",
     "pages/components/dept/dept",
-    "pages/components/deptList/deptList"
+    "pages/components/deptList/deptList",
+    "pages/components/emp/emp",
+    "pages/components/empList/empList",
+    "pages/components/position/position",
+    "pages/components/menu/menu",
+    "pages/components/accountError/accountError"
   ],
   "window":{
     "navigationBarBackgroundColor": "#000000",
@@ -31,7 +36,7 @@
       "selectedIconPath": "image/ic_tab_category_selected.png",
       "text": "工餐预定"
     }, {
-      "pagePath": "pages/components/person/person",
+      "pagePath": "pages/components/mine/mine",
       "iconPath": "image/ic_tab_profile_normal.png",
       "selectedIconPath": "image/ic_tab_profile_selected.png",
       "text": "我的"

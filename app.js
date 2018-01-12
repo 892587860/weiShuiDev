@@ -264,6 +264,12 @@ App({
   setSystemInfoData: function (res) {
     this.globalData.systemInfo = res;
   },
+  setAccountApprovalStatus: function (res) {
+    this.globalData.accountApprovalStatus=res;
+  },
+  getAccountApprovalStatus:function(){
+    return this.globalData.accountApprovalStatus;
+  },
   getSessionKeyByLogin: function () {
     var that = this;
     wx.clearStorage();
@@ -294,8 +300,15 @@ App({
                 },
                 success: function (res) {
                   var maskSessionKey = res.maskSessionKey;
+                  var approvalStatus = res.approvalStatus;
                   console.log("data=" + res);
                   that.setSessionKey(maskSessionKey);
+                  that.setAccountApprovalStatus(approvalStatus);
+                  // wx.showToast({
+                  //   title: '成功',
+                  //   icon: 'success',
+                  //   duration: 2000
+                  // })
                 }
               })
 
@@ -304,7 +317,7 @@ App({
               console.log('获取用户信息失败')
             },
             complete: function(){
-              console.log(33)
+              console.log(33);
             }
           })
 
@@ -315,9 +328,20 @@ App({
 
     });
   },
+  accountStatusJudy:function(){
+    var that=this;
+    // 用户登陆审批状态，0 - 未提交，1 - 待审批，2 - 拒绝，3 - 通过
+    var accountApprovalStatus = that.getAccountApprovalStatus();
+    if (accountApprovalStatus != 3) {
+      wx.navigateTo({
+        url: '/pages/components/accountError/accountError?status=' + accountApprovalStatus,
+      })
+    }
+    
+  },
   globalData: {
-    appId: 'wxdc3325af27488724',
     header: { 'Cookie': '','content-type': 'application/x-www-form-urlencoded'},
+    accountApprovalStatus : -1,
     tabBarPagePathArr: '["/pages/page10000/page10000","/pages/page10010/page10010","/pages/page10013/page10013","/pages/page10009/page10009"]',
     homepageRouter: 'page10000',
     formData: null,

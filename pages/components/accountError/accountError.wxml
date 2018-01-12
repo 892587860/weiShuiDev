@@ -1,0 +1,5 @@
+<!--pages/components/accountError/accountError.wxml-->
+<view class='contain'>
+  <text>{{text}}</text>
+  <button type="primary" class='btnshow' hidden='{{btnHidden}}' catchtap='loginSubmit'>提交</button>
+</view>

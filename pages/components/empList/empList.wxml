@@ -12,7 +12,7 @@
 			<view class="dish flex-wrap flex-direction-row1"  data-deptId="{{item.id}}">
 				<view class="flex-item" catchtap='deptDetail' data-deptId="{{item.id}}">
 					<text class="title">{{item.deptName}}</text>
-					<view class="sub_title"><text>{{item.description}}</text></view>
+					<text class="sub_title">{{item.description}}</text>
 				</view>
 				<view class="add-btn" catchtap="selectDeptData" data-deptId="{{item.id}}">
           <icon class="icon-cls" type="{{item.status ? 'success' : 'circle'}}" color="orange" size="25"></icon>

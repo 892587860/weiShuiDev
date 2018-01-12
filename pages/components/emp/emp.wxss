@@ -1,0 +1,35 @@
+@import "../../common/lib/weui.wxss";
+
+label {
+  display: inline-block;
+  min-width: 270rpx;
+  margin-right: 20rpx;
+}
+form{
+  width: 100%;
+}
+.picker-text {
+  margin-left: 20rpx;
+  position: relative;
+}
+textarea {
+    width: 700rpx;
+    padding: 25rpx 0;
+}
+.textarea-wrp {
+    padding: 0 25rpx;
+    background-color: #fff;
+}
+.checkbox{
+  margin-right: 20rpx;
+}
+.error{
+  height:2.58823529em;
+  min-height:2.58823529em;
+  line-height:2.58823529em;
+  background-color: #e64340;
+  text-align: center;
+  color: beige;
+  font-size:11pt;
+}
+

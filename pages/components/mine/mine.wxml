@@ -6,14 +6,18 @@
   </view>
   <view class="info_list">
     <block wx:for="{{userListInfo}}" wx:key="text">
-        <view class="weui_cell">
+        <navigator url="{{item.url}}">
+          <view class="weui_cell">
             <view class="weui_cell_hd"><image src="{{item.icon}}"></image></view>
             <view class="weui_cell_bd">
                 <view class="weui_cell_bd_p"> {{item.text}} </view>
             </view>
             <view wx:if="{{item.isunread}}" class="badge">{{item.unreadNum}}</view>
-            <view><image class="userinfo-avatar" style="width: 15px;height: 15px;position: absolute;top: 11px;right: 15px;" src="../../../image/icon-arrowdown.png" background-size="cover"></image></view>
-        </view>
+            <view>
+              <image class="arrow-cls"  src="../../../image/icon-arrowdown.png" background-size="cover"></image>
+            </view>  
+          </view>
+        </navigator> 
     </block>
   </view>
 </view>

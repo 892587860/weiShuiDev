@@ -1,7 +1,9 @@
 <template name="head">
-  <view class="page-head">
-    <view class="page-head-title">{{title}}</view>
+  <!-- <view class="page-head"> -->
+  <view>
+    <!-- <view class="page-head-title">{{title}}</view>
     <view class="page-head-line"></view>
-    <view wx:if="{{desc}}" class="page-head-desc">{{desc}}</view>
+    <view wx:if="{{desc}}" class="page-head-desc">{{desc}}</view> -->
+    <image wx:if="{{img}}" src='{{img}}' style="width:100%;height:150px;"></image>
   </view>
 </template>

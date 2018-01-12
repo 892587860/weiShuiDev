@@ -60,8 +60,6 @@
   font-size: 14px;
   color: #b2b2b2;
   margin: 2px 0px;
-  overflow:hidden;
-  height:25px;
 }
 .icon-cls{
   margin-top: 12%;

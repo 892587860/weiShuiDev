@@ -8,26 +8,33 @@ Page({
       icon: '../../../image/iconfont-dingdan.png',
       text: '我的U单',
       isunread: true,
-      unreadNum: 2
+      unreadNum: 2,
+      url: '/pages/components/deptList/deptList'
     }, {
         icon: '../../../image/iconfont-card.png',
-      text: '我的代金券',
-      isunread: false,
-      unreadNum: 2
+        text: '部门管理',
+        isunread: false,
+        unreadNum: 2,
+        url:'/pages/components/deptList/deptList'
     }, {
         icon: '../../../image/iconfont-icontuan.png',
-      text: '我的拼团',
-      isunread: true,
-      unreadNum: 1
+        text: '人力管理',
+        isunread: true,
+        unreadNum: 1,
+        url: '/pages/components/deptList/deptList'
     }, {
         icon: '../../../image/iconfont-shouhuodizhi.png',
-      text: '收货地址管理'
+        text: '权限管理',
+        url: '/pages/components/deptList/deptList'
+        
     }, {
         icon: '../../../image/iconfont-kefu.png',
-      text: '联系客服'
+        text: '系统参数设置',
+        url: '/pages/components/deptList/deptList'
     }, {
         icon: '../../../image/iconfont-help.png',
-      text: '常见问题'
+        text: '常见问题',
+        url: '/pages/components/deptList/deptList'
     }]
   },
 
@@ -40,12 +47,9 @@ Page({
         userInfo: userInfo
       })
     })
-    // wx.getUserInfo({
-    //   success: function (res) {
-    //     that.setData({
-    //     userInfo: res.userInfo
-    //   })
-    //   }
-    // })
+    
+  },
+  onShow:function(){
+    // app.accountStatusJudy();
   }
 })

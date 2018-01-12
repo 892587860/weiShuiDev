@@ -44,7 +44,7 @@ Page({
         {
             id:"471",
             title:"喜多多 椰果王礼盒 200ml*10罐",
-            imgurl:"http://pic35.photophoto.cn/20150625/0016028548222793_b.jpg",
+            imgurl:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1515687043692&di=e1ad7959b02cb83468076b1014bdf43b&imgtype=jpg&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D3626351475%2C443573871%26fm%3D214%26gp%3D0.jpg",
             price:"30.00",
             money:"31.80"
         },
@@ -58,21 +58,21 @@ Page({
         {
             id:"469",
             title:"喜多多 桂圆莲子八宝粥 360g*12罐",
-            imgurl:"http://pic35.photophoto.cn/20150625/0016028548222793_b.jpg",
+            imgurl:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1515687039981&di=20f01a044d047e3da3437196a580e169&imgtype=0&src=http%3A%2F%2Fwww.hubei.gov.cn%2Fmlhb%2Flyms%2Fjzjq%2F201507%2FW020150714332594937673.jpg",
             price:"32.00",
             money:"36.00"
         },
         {
             id:"468",
             title:"喜多多 冰糖雪梨椰果 280g*12罐",
-            imgurl:"http://pic35.photophoto.cn/20150625/0016028548222793_b.jpg",
+            imgurl:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1515687043692&di=e1ad7959b02cb83468076b1014bdf43b&imgtype=jpg&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D3626351475%2C443573871%26fm%3D214%26gp%3D0.jpg",
             price:"38.00",
             money:"42.00"
         },
         {
             id:"467",
             title:"喜多多 什锦椰果罐头 370g 整箱12瓶 果肉果粒",
-            imgurl:"http://pic35.photophoto.cn/20150625/0016028548222793_b.jpg",
+            imgurl:"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1515687043692&di=e1ad7959b02cb83468076b1014bdf43b&imgtype=jpg&src=http%3A%2F%2Fimg0.imgtn.bdimg.com%2Fit%2Fu%3D3626351475%2C443573871%26fm%3D214%26gp%3D0.jpg",
             price:"38.00",
             money:"42.00"
         },

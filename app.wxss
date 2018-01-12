@@ -28,7 +28,7 @@ checkbox, radio{
   margin-right: 10rpx;
 }
 button{
-  margin-top: 20rpx;
+  /* margin-top: 20rpx; */
   margin-bottom: 20rpx;
 }
 form{
@@ -144,7 +144,8 @@ form{
   padding: 0 80rpx;
 }
 .page-section-title{
-  font-size: 28rpx;
+  /* font-size: 28rpx; */
+  font-size: 12pt;
   color: #999999;
   margin-bottom: 10rpx;
   padding-left: 30rpx;
@@ -246,4 +247,12 @@ form{
 /*添加的*/
 .pHCls{
   color:#BEBEBE
+}
+.headText{
+  padding: 15px;
+  text-align: center;
+  font-weight: 20;
+  font-size: 15px;
+	border-bottom: 1px solid #ddd;
+  background-color: #fff;
 }
