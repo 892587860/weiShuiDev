@@ -1,5 +1,4 @@
 var app = getApp();
-var header = app.getHeader();
 Page({
 
   /**
@@ -41,7 +40,6 @@ Page({
       app.sendRequest({
         url: '/auth/getDeptById.do',
         method: 'post',
-        header: header,
         data: {
           deptId: deptId
         },
@@ -100,7 +98,6 @@ Page({
       app.sendRequest({
         url: '/auth/updateDeptById.do',
         method: 'post',
-        header: header,
         data: {
           deptId: deptId,
           deptName: deptName,
@@ -130,7 +127,6 @@ Page({
     //添加一个部门
       app.sendRequest({
         url: '/auth/addDept.do',
-        header: header,
         data:{
           deptName: deptName,
           desc: desc

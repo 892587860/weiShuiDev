@@ -38,7 +38,7 @@ App({
     let data = param.data || {};
     let header = param.header;
     let requestUrl;
-
+    var cookie = this.getCookie();
     if (customSiteUrl) {
       requestUrl = customSiteUrl + param.url;
     } else {
@@ -53,6 +53,9 @@ App({
         }
       }
       param.method = param.method.toUpperCase();
+    }
+    if(header){
+      header['Cookie']=cookie;
     }
 
     if (!param.hideLoading) {
@@ -69,7 +72,8 @@ App({
           data: data,
           method: param.method || 'GET',
           header: header || {
-            'content-type': 'application/json'
+            'content-type': 'application/json',
+            'Cookie':cookie
           },
           success: function (res) {
             that.hideToast();
@@ -196,6 +200,9 @@ App({
   },
   getSessionKey: function () {
     return this.globalData.sessionKey;
+  },
+  getCookie: function () {
+    return this.globalData.header.Cookie;
   },
   getHeader: function () {
     return this.globalData.header;
@@ -340,7 +347,7 @@ App({
     
   },
   globalData: {
-    header: { 'Cookie': '','content-type': 'application/x-www-form-urlencoded'},
+    header: { 'Cookie': ''},
     accountApprovalStatus : -1,
     tabBarPagePathArr: '["/pages/page10000/page10000","/pages/page10010/page10010","/pages/page10013/page10013","/pages/page10009/page10009"]',
     homepageRouter: 'page10000',

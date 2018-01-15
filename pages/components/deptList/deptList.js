@@ -1,6 +1,5 @@
 var app = getApp();
 const config=require("../../../config.js");
-var header = app.getHeader();
 Page({
 	data: {
 		hidden:false,//控制加载框的显示与隐藏
@@ -95,7 +94,6 @@ Page({
     app.sendRequest({
       url: '/auth/getAllDepts.do',
       method: 'post',
-      header:header,
       success: function (res) {
         console.log(res)
         this_.setData({
@@ -160,7 +158,6 @@ Page({
             app.sendRequest({
               url: '/auth/delDeptByIds.do',
               method: 'post',
-              header: header, 
               data: {
                 deptIds: deptIds.join(",")
               },
